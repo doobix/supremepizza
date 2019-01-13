@@ -20,19 +20,15 @@
       .empty-nav-bar {
         height: 9rem;
       }
-      .red-bar {
-        background: red;
-        height: 2rem;
-      }
       .logo {
         height: 15rem;
-        padding-left: 1.5rem;
+        padding-left: 3rem;
         padding-top: 1.5rem;
         position: absolute;
       }
       .nav-item {
         list-style: none;
-        margin: 0 0 0 15rem;
+        margin: 0 0 0 16.5rem;
       }
       .nav-item li {
         display: inline;
@@ -70,15 +66,15 @@
       }
       .section-red {
         background: darkred;
-        padding: 8rem 3rem;
+        padding: 8rem 5rem;
       }
       .section-white {
         background: #FFFDDD;
-        padding: 8rem 3rem;
+        padding: 8rem 5rem;
       }
       .section-green {
         background: forestgreen;
-        padding: 8rem 3rem;
+        padding: 8rem 5rem;
       }
       .footer {
         background: #333333;
@@ -178,8 +174,8 @@
       <img class="logo" src="images/supremepizza.png" />
       <ul class="nav-item">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Order Online</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#online-ordering-services">Order Online</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="empty-nav-bar"></div>
@@ -187,6 +183,7 @@
       <div class="splash-image"></div>
       <div class="splash-overlay"></div>
     </div>
+    <a id="online-ordering-services"></a>
     <div class="section-green order">
       <div class="fancy-title">
         <h3>Online Ordering Services</h3>
@@ -230,6 +227,7 @@
       <p>Testing</p>
       <p>Testing</p>
     </div>
+    <a id="contact"></a>
     <div class="section-red container">
       <div class="contact item">
         <div class="fancy-title">
@@ -265,5 +263,9 @@
     <div class="footer">
       Copyright &copy; 2019 Supreme Pizza
     </div>
+    <script src="lib/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]', { header: '.nav-bar' });
+    </script>
   </body>
 </html>
