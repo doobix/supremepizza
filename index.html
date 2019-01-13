@@ -15,7 +15,7 @@
         height: 9rem;
         position: fixed;
         width: 100%;
-        z-index: 1;
+        z-index: 10;
       }
       .empty-nav-bar {
         height: 9rem;
@@ -30,15 +30,15 @@
         padding-top: 1.5rem;
         position: absolute;
       }
-      .menu {
+      .nav-item {
         list-style: none;
         margin: 0 0 0 15rem;
       }
-      .menu li {
+      .nav-item li {
         display: inline;
         margin-left: 1rem;
       }
-      .menu li a {
+      .nav-item li a {
         color: white;
         display: inline-block;
         font-size: 2rem;
@@ -47,7 +47,7 @@
         padding: 0 1rem;
         text-decoration: none;
       }
-      .menu li a:hover {
+      .nav-item li a:hover {
         background: white;
         color: #333333;
       }
@@ -70,15 +70,15 @@
       }
       .section-red {
         background: darkred;
-        padding: 3rem;
+        padding: 8rem 3rem;
       }
       .section-white {
         background: #FFFDDD;
-        padding: 3rem;
+        padding: 8rem 3rem;
       }
       .section-green {
         background: forestgreen;
-        padding: 3rem;
+        padding: 8rem 3rem;
       }
       .footer {
         background: #333333;
@@ -109,16 +109,74 @@
         font-size: 1.6rem;
         margin: 1rem 0;
       }
+      .contact .fancy-title {
+        margin: 1.5rem 0;
+      }
       .map {
         border: 0.5rem solid #333333;
+      }
+      .order {
+        text-align: center;
+      }
+      .order ul {
+        list-style: none;
+      }
+      .order li {
+        display: inline-block;
+        margin: 1.5rem 1rem 1.5rem 0;
+      }
+      .order h3 {
+        background: #333333;
+        color: white;
+        display: inline-block;
+        font-size: 2rem;
+        padding: 1rem;
+      }
+      .order img {
+        max-width: 26rem;
+      }
+      .fancy-title {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+      }
+      .fancy-title::before {
+        background: white;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: rotate(5deg);
+        width: 100%;
+        z-index: -1;
+      }
+      .fancy-title::after {
+        content: '';
+        background: white;
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: rotate(-5deg);
+        width: 100%;
+        z-index: -1;
+      }
+      .fancy-title h3 {
+        margin: 0;
+      }
+      .order .fancy-title {
+        margin-bottom: 1.5rem;
       }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Magra" rel="stylesheet">
   </head>
   <body>
     <div class="nav-bar">
-      <img class="logo" src="images/supremepizza.png">
-      <ul class="menu">
+      <img class="logo" src="images/supremepizza.png" />
+      <ul class="nav-item">
         <li><a href="#">Home</a></li>
         <li><a href="#">Order Online</a></li>
         <li><a href="#">Contact</a></li>
@@ -129,16 +187,37 @@
       <div class="splash-image"></div>
       <div class="splash-overlay"></div>
     </div>
-    <div class="section-red">
-      <p>Testing</p>
-      <p>Testing</p>
-      <p>Testing</p>
-      <p>Testing</p>
-      <p>Testing</p>
-      <p>Testing</p>
-      <p>Testing</p>
-      <p>Testing</p>
-      <p>Testing</p>
+    <div class="section-green order">
+      <div class="fancy-title">
+        <h3>Online Ordering Services</h3>
+      </div>
+      <ul>
+        <li>
+          <a href="https://www.delivery.com/sf/supreme-pizza-18th-st">
+            <img alt="Order via Delivery" src="images/delivery.png" />
+          </a>
+        </li>
+        <li>
+          <a href="http://eat24hrs.com/restaurants/order2/index.php?id=25527&referrer=OrderButton">
+            <img alt="Order via Eat24" src="images/eat24.png" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.grubhub.com/r/w/14473/sf/supreme-pizza-san-francisco/">
+            <img alt="Order via Grubhub" src="images/grubhub.png" />
+          </a>
+        </li>
+        <li>
+          <a href="https://supremepizza.menufy.com/">
+            <img alt="Order via Menufy" src="images/menufy.png" />
+          </a>
+        </li>
+        <li>
+          <a href="http://slicelife.com/restaurants/ca/san-francisco/94110/supreme-pizza-san-francisco/menu?utm_campaign=order_now_button&utm_medium=referral&utm_source=supremepizzasf.com">
+            <img alt="Order via Slice" src="images/slice.png" />
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="section-white">
       <p>Testing</p>
@@ -151,15 +230,21 @@
       <p>Testing</p>
       <p>Testing</p>
     </div>
-    <div class="section-green container">
+    <div class="section-red container">
       <div class="contact item">
-        <h3>Store Hours</h3>
+        <div class="fancy-title">
+          <h3>Store Hours</h3>
+        </div>
         <p>Sunday - Thursday: 11:00 am - 12:00 am</p>
         <p>Friday &amp; Saturday: 11:00 am - 12:00 am</p>
-        <h3>Address</h3>
+        <div class="fancy-title">
+          <h3>Address</h3>
+        </div>
         <p>3348 18th Street (at Capp)</p>
         <p>San Francisco, CA 94110</p>
-        <h3>Phone</h3>
+        <div class="fancy-title">
+          <h3>Phone</h3>
+        </div>
         <p>415-437-9400</p>
         <p>Delivery starts 11:00 am.</p>
         <p>$15.00 minimum order for delivery.</p>
